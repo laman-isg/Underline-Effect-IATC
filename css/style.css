@@ -1,0 +1,48 @@
+*, *::before, *::after {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+}
+
+nav {
+    width: 70vw;
+    height: 100vh;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #a0a0a0;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, #fd004c, #fe9000, #fff020, #3edf4b, #3363ff, #b102b7);
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+a:hover::after {
+    width: 100%;
+}
